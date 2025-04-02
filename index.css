@@ -1,0 +1,30 @@
+.progress-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #28a745, #218838); /* Green gradient */
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  box-sizing: border-box;
+  transition: width 0.5s ease-in-out; /* Smooth transition */
+}
+
+.progress-bar::after {
+  content: attr(data-progress) "%"; /* Display percentage inside the bar */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
